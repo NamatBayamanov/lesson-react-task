@@ -1,0 +1,218 @@
+.App {
+
+}
+
+.App {
+  & .wrapper {
+    padding: 1rem 0;
+    display: grid;
+
+    grid-template-areas: "Logo Logo Logo Logo"
+      "Navbar Navbar Navbar Navbar"
+      "main main main main"
+    ;
+  }
+}
+
+.Logo {
+  padding: .5rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  grid-area: Logo;
+
+  background-color: rgb(255, 21, 21);
+  display: grid;
+
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  & .logo__left {
+    display: grid;
+    grid-template-areas: "img title"
+      "img spans"
+    ;
+    align-items: center;
+    // text-align: center;
+
+    // grid-template-columns: 100px 150px;
+    // grid-template-rows: 1fr;
+    .logo__title {
+      grid-area: title;
+      grid-column-start: span 2;
+
+      margin-left: 60px;
+    }
+    & .logo__span {
+      grid-area: spans;
+      grid-column-start: span 2;
+      margin-left: 60px;
+    }
+    & .img__container {
+      grid-area: img;
+      max-width: 60px;
+      padding: .5rem;
+      border-radius: 50%;
+      overflow: hidden;
+      & img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  & button {
+    background-color: chocolate;
+    border-radius: 1rem;
+    padding: 0 .2rem;
+    
+    align-items: center;
+    
+    font-size: 20px;
+    
+    margin-right: 130px;
+    position: relative;
+    right: -120px;
+    max-width: 120px;
+    min-width: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    & .logo__price {
+      margin-right: 10px;
+      
+    }
+    & .fence {
+      background-color: black;
+      border: 1px solid black;
+      width: .1px;
+      height: 35px;
+    }
+    & .logo__cart {
+      font-size: 25px;
+      // grid-row: 1fr;
+      margin-right: 5px;
+      color: red;
+    }
+  }
+  
+}
+
+.Navbar {
+  grid-area: Navbar;
+  display: grid;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 1rem 0;
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+
+    justify-content: space-around;
+    align-items: center;
+    & li {
+      
+      border-radius: 1rem;
+      align-self: center;
+      text-align: center;
+      max-width: 100px;
+      padding: .5rem .5rem;
+      background-color: chocolate;
+      border: 1px solid black;
+      color: rgb(124, 69, 22);
+    }
+    & .navbar__last {
+      position: relative;
+      right: -26px;
+      margin-right: 35px;
+
+      min-width: 105px;
+    }
+  }
+}
+
+.Main {
+  grid-area: main;
+  // border: 1px solid red;
+  // margin: 0 auto;
+  text-align: center;
+  margin-right: 25px;
+  & .main__title {
+    font-size: 25px;
+    padding: 1rem;
+  }
+}
+.main__cart {
+  padding: .5rem;
+  border-radius: 1rem;
+  background-color: yellow;
+  display: inline-grid;
+  
+  border: 2px solid black;
+  margin: .2rem;
+  
+  & .pizza__items {
+    display: inline-grid;
+    & .item {
+      display: inline-grid;
+      & .img__container {
+        max-width: 210px;
+        border: 50%;
+        overflow: hidden;
+        & img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+      }
+      & .pizza__title {
+        text-align: center;
+        font-size: 20px;
+        padding: .5rem .3rem;
+      }
+      & .preferences {
+        gap: 3px;
+        display: inline-grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        & button {
+          font-size: 18px;
+          background-color: chocolate;
+          border: 2px solid black;
+          border-radius: 1rem;
+        }
+        & .preference__last {
+          
+        }
+      }
+      & .wish {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem;
+        & h4 {
+          text-align: center;
+          font-size: 18px;
+          background-color: red;
+          border: 2px solid black;
+          border-radius: 1rem;
+          padding: .3rem;
+        }
+        & button {
+          border: 2px solid black;
+          border-radius: 1rem;
+          padding: .2rem;
+          border-radius: 1rem;
+          font-size: 18px;
+          background-color: chocolate;
+        }
+      }
+    }
+  }
+
+}
+

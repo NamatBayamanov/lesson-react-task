@@ -1,30 +1,32 @@
-import { BsCart4 } from "react-icons/bs";
 
-BsCart4
+import "./App.scss";
+
+
+import Logo from "./components/Logo/Logo";
+import PizzaCart from "./components/PizzaCart/PizzaCart";
+import Navbar from "./components/Navbar/Navbar";
+
 function App() {
   return (
     <div className="App">
-      <div className="wrapper">
+      <div className="container">
+        <div className="wrapper">
+          <Logo/>
 
-        <div className="Logo">
-          <h2 className="logo__title">
-            REACT PIZZA
-          </h2>
-          <span>
-            it is just words nothing important
-          </span>
-          <img src="#" alt="#" />
+          <Navbar/>
 
-        </div>
+          <main className="Main">
+            <h2 className="main__title">All pizza</h2>
+            <PizzaCart/>
+            <PizzaCart/>
+            <PizzaCart/>
+            <PizzaCart/>
+            <PizzaCart/>
+            <PizzaCart/>
+          </main>
 
-        <button>
-          $320
-          <span></span>
-          <BsCart4/>
-        </button>
-        <nav>
           
-        </nav>
+        </div>
       </div>
     </div>
   );
